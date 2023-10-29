@@ -1,42 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Calculadora</title>
+    <title>Miraballes & Co.</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
+<body>
 
-
-    <body>
-        <div class="container">
-            <div class="result">
-                <span>0</span>
+    <div class="wrapper">
+        <header class="header-mobile">
+            <h1 class="logo">Miraballes & Co.</h1>
+            <button class="open-menu" id="open-menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </header>
+        <aside>
+            <button class="close-menu" id="close-menu">
+                <i class="bi bi-x"></i>
+            </button>
+            <header>
+                <h1 class="logo">Miraballes & Co.</h1>
+            </header>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <button id="todos" class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Todos los productos</button>
+                    </li>
+                    <li>
+                        <button id="abrigos" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Abrigos</button>
+                    </li>
+                    <li>
+                        <button id="camisetas" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Camisetas</button>
+                    </li>
+                    <li>
+                        <button id="pantalones" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i> Pantalones</button>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito" href="./carrito.html">
+                            <i class="bi bi-cart-fill"></i> Carrito <span id="numerito" class="numerito">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <footer>
+                <p class="texto-footer">Miraballes & Co.</p>
+            </footer>
+        </aside>
+        <main>
+            <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+            <div id="contenedor-productos" class="contenedor-productos">
+                <!-- Esto se va a rellenar con JS -->
             </div>
-
-            <div class="buttons">
-                <button class="item item1 clear">AC</button>
-                <button class="item item1 negative">+/-</button>
-                <button class="item percent sign">%</button>
-                <button class="item item3 sign">/</button>
-                <button class="item numbers ">7</button>
-                <button class="item numbers">8</button>
-                <button class="item numbers">9</button>
-                <button class="item item3 sign">X</button>
-                <button class="item numbers">4</button>
-                <button class="item numbers">5</button>
-                <button class="item numbers">6</button>
-                <button class="item item3 sign">-</button>
-                <button class="item numbers">1</button>
-                <button class="item numbers">2</button>
-                <button class="item numbers">3</button>
-                <button class="item item3 sign">+</button>
-                <button class="item itemZero numbers">0</button>
-                <button class="item comma">,</button>
-                <button class="item item3 equal">=</button>
-            </div>
-        </div>
-
-        <script src="index.js"></script> 
-    </body>
+        </main>
+    </div>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/menu.js"></script>
+</body>
 </html>
